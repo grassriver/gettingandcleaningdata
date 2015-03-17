@@ -4,12 +4,15 @@ names<-read.table("features.txt")
 mergedX<-rbind(testX,trainX)
 colnames(mergedX)<-names[,2]
 newMergedX<-mergedX[,grepl("mean()|std()",names(mergedX))]
+
 subjectX<-read.table("./test/subject_test.txt")
 subjectY<-read.table("./train/subject_train.txt")
 mergedSubject<-rbind(subjectX,subjectY)
+
 testY<-read.table("./test/Y_test.txt")
 trainY<-read.table("./train/Y_train.txt")
 mergedY<-rbind(testY,trainY)
+
 i=1
 for (i in 1:10299){
         if (mergedY[i,1]==1){
@@ -26,6 +29,7 @@ for (i in 1:10299){
                 mergedY[i,1]<-"LAYING"
         }
 }
+
 colnames(mergedSubject)<-c("subject")
 colnames(mergedY)<-c("activities")
 merge<-cbind(mergedSubject,mergedY,newMergedX)
