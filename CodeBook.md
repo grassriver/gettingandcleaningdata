@@ -1,7 +1,7 @@
 This file describes the variables, the data and work that I performed to clean up the data.
 
-*testX: We read the "X_test.txt" and give it to variable "testX".
-*trainX: We read the "X_train.txt" and give it to variable "trainX".
+* testX: We read the "X_test.txt" and give it to variable "testX".
+* trainX: We read the "X_train.txt" and give it to variable "trainX".
 names: We read the "features.txt" and give it to variable "names".
 mergedX: We combine testX and trainX and give it to variable "mergedX". mergedX is 10299 rows by 561 columns.
 We then name the mergedX by names.
